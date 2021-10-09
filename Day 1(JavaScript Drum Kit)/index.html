@@ -16,10 +16,10 @@
         <kbd>S</kbd>
         <span class="sound">hihat</span>
     </div>
-    <dive data-key="68" class="key">
+    <div data-key="68" class="key">
         <kbd>D</kbd>
         <span class="sound">kick</span>
-    </dive>
+    </div>
     <div data-key="70" class="key">
         <kbd>F</kbd>
         <span class="sound">openhat</span>
@@ -40,11 +40,11 @@
         <kbd>K</kbd>
         <span class="sound">tom</span>
     </div>
-    <div data-key="76 class="key>
+    <div data-key="76" class=key>
         <kbd>L</kbd>
         <span class="sound">tink</span>
     </div>
-
+</div>
 <audio data-key="65" src="sound/clap.wav"></audio>
 <audio data-key="83" src="sound/Hihat.wav"></audio>
 <audio data-key="68" src="sound/kick.wav"></audio>
@@ -62,7 +62,7 @@
      if(!audio) return;// stop function from running all together
      audio.currentTime= 0;//rewind
      audio.play();
-     
+     key.classList.add('playing');
   });
  
 
