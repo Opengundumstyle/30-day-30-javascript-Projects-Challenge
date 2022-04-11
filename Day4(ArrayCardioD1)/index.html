@@ -17,7 +17,7 @@
            ]
 
            
-           const people =['Beck , Glenn','Becker,Carl',"Beckett,Samuel","Beddoes,Mick","Beecher,Henry",
+           const people =['Beck,Glenn','Becker,Carl',"Beckett,Samuel","Beddoes,Mick","Beecher,Henry",
                            "Beethoven,Ludwig","Begin,Menachem"," Belloc,Hilarie","Bellow,Saul","Benchley,Robert",
                            "Benenson,Peter","Ben-Gurion,David","Benjamin,Walter","Benn,Tony","Bennington,Chester",
                            "Benson,Leana","Bent,Silas","Bentsen,Lloyd","Berger,Ric","Bergman,Ingmar","Berio,Luciano",
@@ -51,16 +51,34 @@
               console.log(totalYears)
 
             // 5.sort the inventors by years lived
-              const oldest = inventors.sort((a,b)=>{((b.passed - b.year) - (a.passed - a.year))})
+              const oldest = inventors.sort(function(a,b){
+                     
+                         let olderYear = (b.passed - b.year) 
+                         let youngerYear = (a.passed - a.year)
+
+                         return olderYear - youngerYear;
+                        
+                        })
 
               console.log(oldest)
 
-            //create a list of boulevands in Paris that contain "de" anywhere in the name
+            //6.create a list of boulevands in Paris that contain "de" anywhere in the name
+            //https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+            // const Category = document.querySelector('.mw-category');
+            // const links = Array.from(Category.querySelectorAll('a'));
+            // const de = links
+            //            .map(link => link.textContent)
+            //            .filter(streetName => streetName.includes('de'))
+            
           
             //sort Exercise
+            //7.sort people alphabetically by last name
+            const alpha = people.sort(function(lastOne,nextOne){
+                  console.log(lastOne);
+            })
 
             //Reduce Exercise
-            
+            //8.sum up the instance of all of the below items inside the array
             
 
 
